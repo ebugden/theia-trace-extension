@@ -142,3 +142,13 @@ There is only a limited number of such operations and they are only implemented 
 
 ### Time Graph Tooltip
 Currently, the **Time Graph Tooltip** is populated when selecting a state in a Time Graph view.
+
+## Related code
+This trace viewer depends on code from several other repos. Sometimes resolving issues in this project requires making changes in these code bases:
+
+| Project | Description | Related issues  | Links |
+|---------------|----|--------------------------|---|
+| [Trace Compass](https://www.eclipse.org/tracecompass/) | Trace analysis tool and precursor to this trace viewer. This trace viewer will eventually replace Trace Compass so its analysis features are gradually being transferred here.  | [label:"Trace Compass"](https://github.com/theia-ide/theia-trace-extension/labels/Trace%20Compass) | [Dev info](https://wiki.eclipse.org/Trace_Compass), [Dev setup](https://wiki.eclipse.org/Trace_Compass/Development_Environment_Setup) |
+| [Trace Server](https://download.eclipse.org/tracecompass.incubator/trace-server/rcp/?d) | Backend for this trace viewer frontend. Manages and analyzes trace files. Server originally part of Trace Compass so it requires the same dev setup. | [label:"Trace Server"](https://github.com/theia-ide/theia-trace-extension/labels/Trace%20Server) | [Dev setup](https://wiki.eclipse.org/Trace_Compass/Development_Environment_Setup) (same as Trace Compass), [Code](https://git.eclipse.org/r/admin/repos/tracecompass.incubator/org.eclipse.tracecompass.incubator) (same repo as Trace Compass incubator) |
+| [Trace Server Protocol Client](https://github.com/theia-ide/tsp-typescript-client) | Allows the trace viewer to communicate with the server using the [Trace Server Protocol (TSP)](https://github.com/theia-ide/trace-server-protocol). | [label:"trace server protocol"](https://github.com/theia-ide/theia-trace-extension/labels/trace%20server%20protocol) |   |
+| [Timeline Chart](https://github.com/theia-ide/timeline-chart) | Implements the Gantt charts used in this trace viewer.  | [label:timeline-chart](https://github.com/theia-ide/theia-trace-extension/labels/timeline-chart) |   |
